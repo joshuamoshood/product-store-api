@@ -1,0 +1,133 @@
+/*
+ * Custom translucent site header
+ */
+
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+.site-header a {
+  color: #999;
+  transition: ease-in-out color .15s;
+}
+
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero-img {
+  background: url("/images/hero-img.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-img p, .hero-img h1 {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-img .btn {
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.hero-img .btn {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+/*
+ * Extra utilities
+ */
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.flex-equal>* {
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .flex-md-equal>* {
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+.card {
+  margin-bottom: 30px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-body {
+  position: relative;
+}
+
+.card-price {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.buy-now-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: none;
+}
+
+.card:hover .buy-now-btn {
+  display: block;
+}
+
+/* custom-bootstrap.css */
+
+:root {
+  --primary-color: #ff6347; /* Define your custom primary color */
+}
+
+/* Override Bootstrap's default primary color */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus {
+  color: #fff;
+  background-color: var(--primary-color); /* Use the custom primary color */
+  border-color: var(--primary-color); /* Use the custom primary color */
+}
+
+/* Customize other Bootstrap components as needed */

@@ -1,0 +1,12 @@
+extends ../layout/base-layout.pug
+
+block content
+    div.container.product-detail.my-5.pt-4
+      div.row
+        div.col-md-7
+          img.product-img(src=product.image, alt=product.name)
+        div.col-md-5.product-info
+          h1.product-title= product.name
+          p.product-price= `$${product.price}`
+          p.product-description= product.description
+          a.btn.btn-primary.btn-buy(href=product.link) Add to Cart

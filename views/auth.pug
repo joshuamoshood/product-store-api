@@ -1,0 +1,28 @@
+extends layout/base-layout.pug
+
+block content
+
+    .d-flex.justify-content-center.my-5#loginForm
+        .row
+        .col-md-6
+            .column1
+            h2.title Login
+            form(action="/auth/login" method="POST")
+                .form-group
+                label(for="email") Email:
+                input.form-control(type="email" id="email" name="email" class="email input" required)
+                .form-group
+                label(for="password") Password:
+                input.form-control(type="password" id="password" name="password" class="password input" required)
+                .form-group
+                button.btn.btn-primary(type="submit") Login
+            
+            a(href="/auth/sign-up").btn.btn-link Dont have an account? sign up
+
+            h3.mt-4 Test credentials
+            p email: example@gmail.com
+            p password: password
+   
+
+   
+        

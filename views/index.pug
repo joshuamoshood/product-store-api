@@ -1,0 +1,20 @@
+extends layout/base-layout.pug
+
+block content
+    div.position-relative.overflow-hidden.text-center.hero-img
+        div.col-md-5.p-lg-5.mx-auto.my-5
+            h1.display-4.font-weight-normal Fake Shop
+            p.lead.font-weight-normal Buy latest gadget at discounted prices
+            a.btn.btn-outline-secondary(href="#") Coming soon
+
+    div.container.mt-5
+        div.row.justify-content-center
+            // Loop through products array
+            each product in products
+                div.col-md-4
+                    div.card.shadow-sm
+                        img.card-img-top(src=product.image, alt=product.name)
+                        div.card-body.px-3
+                            h5.card-title= product.name
+                            p.card-price=`$${product.price}`
+                            a.btn.btn-primary.buy-now-btn(href="/products/list/"+product.id) View
