@@ -4,7 +4,7 @@ This project is a Node.js website for a fictional business named Joshua Products
 
 ## Get Started
 - clone project
-- Run `npm i && npm run dev"
+- Run `npm i && npm run dev`
 
 
 
